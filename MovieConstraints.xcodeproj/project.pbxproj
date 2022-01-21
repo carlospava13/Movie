@@ -18,6 +18,12 @@
 		D14C77ED279B5CF30050D3BA /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14C77EC279B5CF30050D3BA /* TableView.swift */; };
 		D14C77EF279B5D1E0050D3BA /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14C77EE279B5D1E0050D3BA /* DataSource.swift */; };
 		D14C77F1279B5FD70050D3BA /* GenericTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14C77F0279B5FD70050D3BA /* GenericTableViewCell.swift */; };
+		D14C77F4279B612C0050D3BA /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14C77F3279B612C0050D3BA /* HomeTableViewCell.swift */; };
+		D14C77F6279B61410050D3BA /* HomeViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14C77F5279B61410050D3BA /* HomeViewObject.swift */; };
+		D14C77F8279B615D0050D3BA /* ViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14C77F7279B615D0050D3BA /* ViewObject.swift */; };
+		D14C77FB279B62040050D3BA /* MovieLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14C77FA279B62040050D3BA /* MovieLabel.swift */; };
+		D14C77FD279B63B90050D3BA /* MovieFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14C77FC279B63B90050D3BA /* MovieFont.swift */; };
+		D14C77FF279B64C40050D3BA /* HomeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14C77FE279B64C40050D3BA /* HomeDataSource.swift */; };
 		D1D3C85F279B40EC005C82BA /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D3C85E279B40EC005C82BA /* BaseViewController.swift */; };
 		D1D3C863279B41B0005C82BA /* UIImage+Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D3C862279B41B0005C82BA /* UIImage+Resources.swift */; };
 /* End PBXBuildFile section */
@@ -55,6 +61,12 @@
 		D14C77EC279B5CF30050D3BA /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 		D14C77EE279B5D1E0050D3BA /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		D14C77F0279B5FD70050D3BA /* GenericTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericTableViewCell.swift; sourceTree = "<group>"; };
+		D14C77F3279B612C0050D3BA /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		D14C77F5279B61410050D3BA /* HomeViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewObject.swift; sourceTree = "<group>"; };
+		D14C77F7279B615D0050D3BA /* ViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewObject.swift; sourceTree = "<group>"; };
+		D14C77FA279B62040050D3BA /* MovieLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieLabel.swift; sourceTree = "<group>"; };
+		D14C77FC279B63B90050D3BA /* MovieFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieFont.swift; sourceTree = "<group>"; };
+		D14C77FE279B64C40050D3BA /* HomeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataSource.swift; sourceTree = "<group>"; };
 		D1D3C85E279B40EC005C82BA /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D1D3C862279B41B0005C82BA /* UIImage+Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Resources.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,11 +119,12 @@
 		A2E5E67A279A456F001963C3 /* MovieConstraints */ = {
 			isa = PBXGroup;
 			children = (
+				D14C77F9279B61F50050D3BA /* UI */,
+				D14C77F2279B61140050D3BA /* Home */,
 				D1D3C861279B4197005C82BA /* Extensions */,
 				D1D3C860279B40F0005C82BA /* Base */,
 				A2E5E67B279A456F001963C3 /* AppDelegate.swift */,
 				A2E5E67D279A456F001963C3 /* SceneDelegate.swift */,
-				A2E5E67F279A456F001963C3 /* HomeViewController.swift */,
 				A2E5E684279A4570001963C3 /* Assets.xcassets */,
 				A2E5E686279A4570001963C3 /* LaunchScreen.storyboard */,
 				A2E5E689279A4570001963C3 /* Info.plist */,
@@ -136,6 +149,26 @@
 			path = MovieConstraintsUITests;
 			sourceTree = "<group>";
 		};
+		D14C77F2279B61140050D3BA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A2E5E67F279A456F001963C3 /* HomeViewController.swift */,
+				D14C77F3279B612C0050D3BA /* HomeTableViewCell.swift */,
+				D14C77F5279B61410050D3BA /* HomeViewObject.swift */,
+				D14C77FE279B64C40050D3BA /* HomeDataSource.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D14C77F9279B61F50050D3BA /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				D14C77FA279B62040050D3BA /* MovieLabel.swift */,
+				D14C77FC279B63B90050D3BA /* MovieFont.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		D1D3C860279B40F0005C82BA /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +176,7 @@
 				D14C77EC279B5CF30050D3BA /* TableView.swift */,
 				D14C77EE279B5D1E0050D3BA /* DataSource.swift */,
 				D14C77F0279B5FD70050D3BA /* GenericTableViewCell.swift */,
+				D14C77F7279B615D0050D3BA /* ViewObject.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -286,11 +320,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				D14C77EF279B5D1E0050D3BA /* DataSource.swift in Sources */,
+				D14C77F8279B615D0050D3BA /* ViewObject.swift in Sources */,
 				A2E5E680279A456F001963C3 /* HomeViewController.swift in Sources */,
 				D1D3C863279B41B0005C82BA /* UIImage+Resources.swift in Sources */,
 				D1D3C85F279B40EC005C82BA /* BaseViewController.swift in Sources */,
 				D14C77ED279B5CF30050D3BA /* TableView.swift in Sources */,
 				D14C77F1279B5FD70050D3BA /* GenericTableViewCell.swift in Sources */,
+				D14C77FB279B62040050D3BA /* MovieLabel.swift in Sources */,
+				D14C77FD279B63B90050D3BA /* MovieFont.swift in Sources */,
+				D14C77FF279B64C40050D3BA /* HomeDataSource.swift in Sources */,
+				D14C77F6279B61410050D3BA /* HomeViewObject.swift in Sources */,
+				D14C77F4279B612C0050D3BA /* HomeTableViewCell.swift in Sources */,
 				A2E5E67C279A456F001963C3 /* AppDelegate.swift in Sources */,
 				A2E5E67E279A456F001963C3 /* SceneDelegate.swift in Sources */,
 			);

@@ -12,12 +12,16 @@ final class HomeViewController: BaseViewController {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.backgroundColor = .red
+        tableView.register(HomeTableViewCell.self)
         return tableView
     }()
+    
+    private let dataSource = HomeDataSource()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setTableViewConstraints()
+        setupTableView()
     }
     
     private func setTableViewConstraints() {
@@ -29,5 +33,12 @@ final class HomeViewController: BaseViewController {
             tableView.trailingAnchor.constraint(equalTo: guides.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: guides.bottomAnchor)
         ])
+    }
+    
+    private func setupTableView() {
+        tableView.dataSource = dataSource
+        let data = [HomeViewObject(name: "Nicolas"),HomeViewObject(name: "Carlos")]
+        dataSource.set(data: data)
+        tableView.reloadData()
     }
 }

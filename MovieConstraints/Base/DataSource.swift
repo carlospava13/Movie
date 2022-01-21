@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DataSource<Data, Cell: GenericTableViewCell<Data>>: NSObject, UITableViewDataSource {
+class DataSource<Data: ViewObject, Cell: GenericTableViewCell<Data>>: NSObject, UITableViewDataSource {
 
     private var data: [Data] = []
     

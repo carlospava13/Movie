@@ -7,6 +7,6 @@
 
 import UIKit
 
-class GenericTableViewCell<Data>: UITableViewCell {
+class GenericTableViewCell<Data: ViewObject>: UITableViewCell {
     func set(data: Data) {}
 }

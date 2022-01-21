@@ -19,7 +19,7 @@ final class HomeView: UIView {
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "NAMAVA"
+        label.text = "test"
         label.textColor = .blue
         return label
     }()

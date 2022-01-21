@@ -1,0 +1,23 @@
+{
+  "rating": [
+    {
+      "title": "justice league",
+      "urlImage": "",
+      "rate": 4
+    }
+  ],
+  "popular": [
+    {
+      "title": "Joker",
+      "urlImage": "",
+      "rate": 5
+    }
+  ],
+  "new": [
+    {
+      "title": "Joker",
+      "urlImage": "",
+      "rate": 5
+    }
+  ]
+}

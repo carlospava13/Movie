@@ -14,7 +14,7 @@ class BaseViewController: UIViewController {
         setNavigationBarBackgrounColor()
         setLogoIcon()
         setNotificationBarButton()
-        view.backgroundColor = .white
+        view.backgroundColor = .black
     }
     
     private func setNavigationBarBackgrounColor() {

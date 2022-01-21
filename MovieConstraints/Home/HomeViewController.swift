@@ -37,8 +37,17 @@ final class HomeViewController: BaseViewController {
     
     private func setupTableView() {
         tableView.dataSource = dataSource
-        let data = [HomeViewObject(name: "Nicolas"),HomeViewObject(name: "Carlos")]
-        dataSource.set(data: data)
-        tableView.reloadData()
+//        let data = [HomeViewObject(name: "Nicolas"),HomeViewObject(name: "Carlos")]
+//        dataSource.set(data: data)
+//        tableView.reloadData()
+        
+        let response = Reponse()
+        do {
+            let data:MoveResponseModel = try response.get(jsonFile: .homeMovies)
+            print(data)
+        } catch {
+            print(error)
+        }
+        
     }
 }

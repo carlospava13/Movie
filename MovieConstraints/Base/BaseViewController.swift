@@ -14,10 +14,16 @@ class BaseViewController: UIViewController {
         setNavigationBarBackgrounColor()
         setLogoIcon()
         setNotificationBarButton()
+        view.backgroundColor = .white
     }
     
     private func setNavigationBarBackgrounColor() {
-        navigationController?.navigationBar.barTintColor = .black
+        let appearance = UINavigationBarAppearance()
+        appearance.backgroundColor = .black
+        navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.standardAppearance = appearance
+        navigationController?.navigationBar.compactAppearance = appearance
+        navigationController?.navigationBar.scrollEdgeAppearance = appearance
     }
     
     private func setLogoIcon() {

@@ -12,11 +12,19 @@ class BaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavigationBarBackgrounColor()
+        setLogoIcon()
         setNotificationBarButton()
     }
     
     private func setNavigationBarBackgrounColor() {
         navigationController?.navigationBar.barTintColor = .black
+    }
+    
+    private func setLogoIcon() {
+        let imageView = UIImageView(image: UIImage(resource: .logoicon))
+        imageView.contentMode = .scaleAspectFill
+        let buttonItem = UIBarButtonItem(customView: imageView)
+        navigationItem.leftBarButtonItem = buttonItem
     }
     
     private func setNotificationBarButton() {

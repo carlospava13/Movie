@@ -13,7 +13,7 @@ final class HomeTableViewCell: GenericTableViewCell<HomeViewObject> {
     private lazy var titleLabel: MovieLabel = {
         let label = MovieLabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.fontType = .regular(15)
+        label.fontType = .bold(20)
         return label
     }()
     

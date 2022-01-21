@@ -10,14 +10,10 @@ import UIKit
 class MovieLabel: UILabel {
     
     var fontType: MovieFont = .regular(14)
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
         setFont()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
     
     private func setFont() {

@@ -10,36 +10,39 @@ import UIKit
 
 final class HomeTableViewCell: GenericTableViewCell<HomeViewObject> {
     
-    private lazy var titleLabel: MovieLabel = {
-        let label = MovieLabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.fontType = .bold(20)
-        return label
+    private lazy var collectionView: CollectionView = {
+        let collectionView = CollectionView()
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.register(HomeCollectionViewCell.self)
+        return collectionView
     }()
     
+    private lazy var dataSource = HomeCollectionViewDataSource()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        setTitleConstraints()
+        setCollectionViewConstraints()
+        backgroundColor = .clear
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
-    private func setTitleConstraints() {
-        contentView.addSubview(titleLabel)
+    private func setCollectionViewConstraints() {
+        contentView.addSubview(collectionView)
         NSLayoutConstraint.activate([
-            titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
-            titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
-            titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
-            titleLabel.heightAnchor.constraint(equalToConstant: 25),
-            titleLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -16)
+            collectionView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
+            collectionView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8),
+            collectionView.heightAnchor.constraint(equalToConstant: 200)
         ])
     }
     
     override func set(data: HomeViewObject) {
-        titleLabel.text = data.name
+        collectionView.dataSource = dataSource
+        dataSource.set(data: data.movies)
+        collectionView.reloadData()
     }
 }

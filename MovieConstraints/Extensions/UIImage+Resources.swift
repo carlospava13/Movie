@@ -18,4 +18,5 @@ extension UIImage {
 enum ImageResources: String {
     case notifiactionicon
     case logoicon
+    case placeholdercollectionviewcell
 }

@@ -11,8 +11,8 @@ final class HomeViewController: BaseViewController {
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.backgroundColor = .red
         tableView.register(HomeTableViewCell.self)
+        tableView.backgroundColor = .clear
         return tableView
     }()
     
@@ -43,11 +43,15 @@ final class HomeViewController: BaseViewController {
         
         let response = Reponse()
         do {
-            let data:MoveResponseModel = try response.get(jsonFile: .homeMovies)
-            print(data)
+            let data: MoveResponseModel = try response.get(jsonFile: .homeMovies)
+            
+            let rating = data.rating.map { movieModel -> MovieViewObject in
+                MovieViewObject(imageUrl: movieModel.urlImage)
+            }
+                
+            dataSource.set(data: [HomeViewObject(movies: rating)])
         } catch {
             print(error)
         }
-        
     }
 }

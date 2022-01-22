@@ -8,5 +8,9 @@
 import Foundation
 
 struct HomeViewObject: ViewObject {
-    let name: String
+    let movies: [MovieViewObject]
+}
+
+struct MovieViewObject: ViewObject {
+    let imageUrl: String
 }

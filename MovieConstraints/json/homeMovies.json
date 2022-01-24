@@ -2,22 +2,47 @@
   "rating": [
     {
       "title": "justice league",
-      "urlImage": "",
+      "urlImage": "https://www.beahero.gg/wp-content/uploads/2022/01/Justice-League.jpg",
+      "rate": 4
+    }
+    {
+      "title": "New Movies",
+      "urlImage": "https://static1.colliderimages.com/wordpress/wp-content/uploads/2021/03/best-new-movies-netflix-march-2021-v2.png",
       "rate": 4
     }
   ],
   "popular": [
     {
       "title": "Joker",
-      "urlImage": "",
-      "rate": 5
+      "urlImage": "https://pics.filmaffinity.com/Joker-186831882-large.jpg",
+      "rate": 4.5
+    }
+    {
+      "title": "Dunkirk",
+      "urlImage": "https://upload.wikimedia.org/wikipedia/en/1/15/Dunkirk_Film_poster.jpg",
+      "rate": 2
+    }
+    {
+      "title": "Moonlight",
+      "urlImage": "https://pics.filmaffinity.com/Moonlight-232276883-large.jpg",
+      "rate": 3
     }
   ],
   "new": [
     {
-      "title": "Joker",
-      "urlImage": "",
+      "title": "Venom",
+      "urlImage": "https://pics.filmaffinity.com/Venom-367385587-large.jpg",
       "rate": 5
+    }
+    {
+      "title": "GODZILLA vs KONG",
+      "urlImage": "https://eastxray.com/wp-content/uploads/2021/05/kongposter-1.jpg",
+      "rate": 4
+    }
+    {
+      "title": "Morbius",
+      "urlImage": "https://www.comingsoon.net/assets/uploads/2021/12/FFzlXHlXoAIdHvW.jpeg",
+      "rate": 4
     }
   ]
 }
